@@ -9,6 +9,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=M+PLUS+1p&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root{
     --cor0: #ffffff;
     --cor1: #DBAE5B;
@@ -24,6 +27,7 @@
 }
 body{
     background-color: var(--cor1);
+    font-family: Montserrat, Verdana, Arial, sans-serif;
 }
 
 header{
@@ -44,6 +48,17 @@ header{
 .logo{
     display: flex;
     flex-direction: row-reverse;
+}
+
+h1 {
+    font-family:  Dancing Script;
+    font-size: 70px;
+}
+
+h2{
+    font-family: Rowdies;
+    font-weight: 100;
+    font-size: 20px;
 }
 
 .topo{
