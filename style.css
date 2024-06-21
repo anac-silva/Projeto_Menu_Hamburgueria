@@ -34,7 +34,7 @@ header{
     display: flex;
     background-color: #4d4b4abb;
     background-image: url(Imagens/2-capa.jpg);
-    background-size: 100%;
+    background-size: 120%;
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     background-attachment: fixed; /* Faz a imagem de fundo ficar fixa ao rolar a página */
     background-blend-mode: color-burn; 
@@ -61,7 +61,7 @@ h2{
     font-size: 20px;
 }
 
-.topo{
+.top{
     margin: 2% 5% ;
 }
 
@@ -110,4 +110,14 @@ footer{
     background-color: chocolate;
     text-align: center;
     padding: 20px;
+}
+
+.topo, h3 {
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+    width: auto;
+    background-color: var(--cor2);
+
+    
 }
