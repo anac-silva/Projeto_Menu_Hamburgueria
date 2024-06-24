@@ -100,6 +100,12 @@ a:hover {
 img{
     height: 150px;
     border-radius: 20px;
+    margin: 2%;
+}
+
+h4, p, h5{
+    margin: 10px 20px;
+    text-align: justify;
 }
 
 div{
@@ -118,6 +124,58 @@ footer{
     padding: 10px;
     width: auto;
     background-color: var(--cor2);
-
-    
 }
+
+.detalhe {
+    text-decoration: none;
+    color: black;
+    background-color: var(--cor0);
+    display: flex;
+    height: auto;
+    width: 400px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+input[type="text"]{
+    height: 50px;
+    width: 350px;
+    margin: 10px 0px;
+}
+
+input[type="button"]{
+    height: 35px;
+    width: 200px;
+    margin: 10px 0px;
+    border-radius: 20px;
+    border: solid;
+    border-color: var(--cor2);
+    background-color: var(--cor0);
+}
+
+input[type="button"]:hover{
+    background-color: var(--cor2);
+    border-color: var(--cor2);
+    color: white;
+}
+
+.carrinho{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+.fundo{
+    margin: 0px;
+}
+
+.fundo img{
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+
