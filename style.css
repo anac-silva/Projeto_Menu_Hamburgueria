@@ -34,7 +34,7 @@ body{
 header{
     display: flex;
     background-color: #4d4b4abb;
-    background-image: url(Imagens/2-capa.jpg);
+    background-image: url(Imagens/lanches/2-capa.jpg);
     background-size: 120%;
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     background-attachment: fixed; /* Faz a imagem de fundo ficar fixa ao rolar a página */
@@ -74,12 +74,12 @@ h2{
     justify-content: space-evenly;
 }
 
-.lista a {
+.lanches {
     text-decoration: none;
     color: black;
     background-color: var(--cor0);
     display: flex;
-    height: 180px;
+    height: 235px;
     width: 500px;
     border-radius: 10px;
     flex-wrap: nowrap;
@@ -87,17 +87,16 @@ h2{
     margin: 10px;
 }
 
-.lista a:hover {
-    text-decoration: none;
-    color: black;
-    background-color: var(--cor0);
+.lanches:hover {
+    background-color: var(--cor1);
+    border: 1px solid var(--cor4);
+}
+
+.fotos > img{
     display: flex;
-    height: 190px;
-    width: 530px;
-    border-radius: 10px;
-    flex-wrap: nowrap;
-    align-items: center;
-    margin: 10px;
+    height: 150px;
+    border-radius: 20px;
+    margin: 1%;
 }
 
 img{
@@ -107,8 +106,9 @@ img{
 }
 
 h4, p, h5{
-    margin: 10px 20px;
+    margin: 10px 0px;
     text-align: justify;
+    height: 100%;
 }
 
 div{
@@ -117,12 +117,18 @@ div{
 
 footer{
     background-color: chocolate;
+}
+
+footer p{
     text-align: center;
     padding: 20px;
 }
 
-.topo, h3 {
-    text-align: center;
+
+.topo, h3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0px;
     padding: 10px;
     width: auto;
@@ -180,22 +186,6 @@ input[type="button"]:hover{
     width: 100%;
     border-radius: 10px;
     margin: 10px 0px;
-}
-
-.voltar > a{
-    display: flex;
-    height: 50px;
-    width: 400px;
-    margin: 10px 0px;
-    border-radius: 20px;
-    border-color: var(--cor2);
-    font-size: 14px;
-    color: var(--cor4);
-    justify-content: center;
-}
-
-.voltar > a:hover{
-    text-decoration: underline;
 }
 
 #lista_pedido {
