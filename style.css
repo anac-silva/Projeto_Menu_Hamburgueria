@@ -1,14 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=M+PLUS+1p&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -23,19 +15,22 @@
     
 *{
     margin: 0px;
+    font-size: 15px;
     padding: 0px;
     font-family: Montserrat, Verdana, Arial, sans-serif;
 }
 body{
     background-color: var(--cor1);
+    font-size: 15px;
     font-family: Montserrat, Verdana, Arial, sans-serif;
 }
 
 header{
     display: flex;
+    height: 270px;
     background-color: #4d4b4abb;
     background-image: url(Imagens/lanches/2-capa.jpg);
-    background-size: 120%;
+    background-size: 110%;
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     background-attachment: fixed; /* Faz a imagem de fundo ficar fixa ao rolar a página */
     background-blend-mode: color-burn; 
@@ -49,23 +44,50 @@ header{
 .logo{
     display: flex;
     flex-direction: row-reverse;
+    height: 150px;
+    align-items: flex-end;
+}
+
+.logo > img{
+    height: 80px;
 }
 
 h1 {
     font-family:  Dancing Script;
-    font-size: 70px;
+    font-size: 50px;
 }
 
 h2{
     font-family: Rowdies;
     font-weight: 100;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .top{
+    margin: 10px 2% ;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.cab{
     margin: 2% 5% ;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+}
+
+.pedidos {
+    display: flex;
+    align-items: flex-end;
+    width: 100px;
+    justify-content: center;
+}
+
+.pedidos > a > img {
+    width: 60px;
+    height: 50px;
+    border-radius: 10px ;
 }
 
 .lista{
@@ -85,11 +107,7 @@ h2{
     flex-wrap: nowrap;
     align-items: center;
     margin: 10px;
-}
-
-.lanches:hover {
-    background-color: var(--cor1);
-    border: 1px solid var(--cor4);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.411);
 }
 
 .fotos > img{
@@ -99,31 +117,16 @@ h2{
     margin: 1%;
 }
 
-img{
-    height: 150px;
-    border-radius: 20px;
-    margin: 2%;
-}
-
 h4, p, h5{
     margin: 10px 0px;
     text-align: justify;
     height: 100%;
+    font-size: 14px;
 }
 
 div{
     margin: 10px;
 }
-
-footer{
-    background-color: chocolate;
-}
-
-footer p{
-    text-align: center;
-    padding: 20px;
-}
-
 
 .topo, h3{
     display: flex;
@@ -135,18 +138,6 @@ footer p{
     background-color: var(--cor2);
 }
 
-.detalhe {
-    text-decoration: none;
-    color: black;
-    background-color: var(--cor0);
-    display: flex;
-    height: auto;
-    width: 400px;
-    border-radius: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
-}
 
 input[type="text"]{
     height: 50px;
@@ -159,15 +150,21 @@ input[type="button"]{
     width: 200px;
     margin: 10px 0px;
     border-radius: 20px;
-    border: solid;
+    border: 2px solid;
     border-color: var(--cor2);
     background-color: var(--cor0);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.411);
 }
 
 input[type="button"]:hover{
     background-color: var(--cor2);
     border-color: var(--cor2);
     color: white;
+}
+
+input[type="button"]:active {
+    transform: translateY(2px);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.411);
 }
 
 .carrinho{
@@ -188,33 +185,149 @@ input[type="button"]:hover{
     margin: 10px 0px;
 }
 
+footer{
+    background-color: chocolate;
+}
+
+footer p{
+    text-align: center;
+    padding: 20px;
+}
+
+/*PEDIDO*/
+
+
 #lista_pedido {
     background-color: var(--cor0);
     display: flex;
-    height: 500px;
-    max-width: 600px;
-    border-radius: 10px;
-    margin: auto;
-}
-.pedidos {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.cab{
-    display: flex;
-    flex-direction: column;
-}
-.pedidos > a {
-    display: flex;
+    min-height: 100px;
     height: 100%;
-    text-align: left;
-    align-items: center;
+    max-width: 700px;
+    margin: auto;
+    flex-direction: column;
+    padding: 10px;
 }
 
-.pedidos > a > img{
+.item-carrinho {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item-carrinho > .item-nome {
+    min-width: 320px;
+}
+
+.item-carrinho > .item-preco {
+    min-width: 100px;
+}
+
+.item-carrinho > button {
+    display: flex;
+    min-width: 100px;
+    border: none;
+    background-color: var(--cor1);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.274);
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.411);
+}
+
+#valor_total {
+    background-color: rgb(233, 233, 233);
     display: flex;
     height: 50px;
-    text-align: left;
+    max-width: 700px;
+    margin: auto;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.274);
 }
 
+#formas_pagamento {
+    background-color: var(--cor0);
+    display: flex;
+    flex-wrap: wrap;
+    height: 50px;
+    max-width: 700px;
+    margin: auto;
+    padding: 0px 10px;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+#pagamento_cartao, #pagamento_dinheiro, #pagamento_pix {
+    border: 1px solid rgba(0, 0, 0, 0.274);
+    border-radius: 5px;
+    width: 80px;
+    min-height: 40px;
+    height: 100%;
+    margin: 10px;
+    background-color: var(--cor1);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.411);
+}
+
+#pagamento_cartao:hover, #pagamento_dinheiro:hover, #pagamento_pix:hover, .item-carrinho > button:hover {
+    background-color: var(--cor2);
+
+}
+.botoes {
+    background-color: var(--cor0);
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100px;
+    height: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px 10px;
+    justify-content: space-around;
+    align-items: center;    
+}
+
+.botoes > button{
+    display: flex;
+    color: var(--cor5);
+    width: 160px;
+    height: 50px;
+    margin: 10px;
+    background-color: var(--cor1);
+    border: 1px solid rgba(0, 0, 0, 0.274);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.411);
+}
+
+.botoes > a {
+    text-decoration: none;
+    display: flex;
+    font-size: 15px;
+    color: var(--cor5);
+    font-family: Montserrat, Verdana, Arial, sans-serif;
+    width: 180px;
+    height: 50px;
+    background-color: var(--cor1);
+    border: 1px solid rgba(0, 0, 0, 0.274);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.411);
+}
+
+.botoes > a:hover, .botoes > button:hover {
+    background-color: var(--cor2);
+}
+
+#mensagem_pedido_concluido {
+    display: flex;
+    background-color: var(--cor0);
+    min-height: 90px;
+    height: 100%;
+    max-width: 600px;
+    margin: auto;
+    flex-direction: column;
+    padding: 10px;
+}
