@@ -52,3 +52,6 @@ O projeto é composto pelos seguintes arquivos:
 Nome: Ana Carolina Silva
 Contato: desenvolvedora.ana.silva@gmail.com
 
+### Acesso
+Além do repositório, você também pode acessar utilizando o site: https://best-hamburgueria.vercel.app/
+
