@@ -49,9 +49,7 @@ O projeto é composto pelos seguintes arquivos:
 * JavaScript: Para a lógica de manipulação do carrinho de compras e interatividade.
 
 ### Autor
-Nome: Ana Carolina Silva
+Nome: Ana Carolina Merloti
 Contato: desenvolvedora.ana.silva@gmail.com
 
-### Acesso
-Além do repositório, você também pode acessar utilizando o site: https://best-hamburgueria.vercel.app/
 
